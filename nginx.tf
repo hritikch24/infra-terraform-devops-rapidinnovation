@@ -1,6 +1,6 @@
 resource "helm_release" "nginx" {
   name       = "nginx"
-  repository = "https://aws.github.io/eks-charts"
+  repository = "git@github.com:Devops-RI/infra-rapidinnovation.git//nginxssl?ref=helm"
   chart      = "nginxssl"
 
   set {
