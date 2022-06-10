@@ -34,9 +34,10 @@ jobs:
       # Checkout the code base #
       ##########################
       - uses: actions/checkout@v2
-      - uses: webfactory/ssh-agent@v0.5.4
         with:
             ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}      
       - name: Super-Linter
         uses: github/super-linter@v4.9.4
+        with:
+            ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}     
         
