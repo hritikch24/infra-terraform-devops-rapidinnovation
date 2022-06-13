@@ -39,8 +39,6 @@ jobs:
       # Checkout the code base #
       ##########################
       - uses: actions/checkout@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
